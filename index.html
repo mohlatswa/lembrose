@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lembrose Holding Company | Trading & Logistics</title>
+<meta name="description" content="Lembrose Holding Company — general trading, procurement, transport and logistics solutions across South Africa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1f3a'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' fill='%23c9a54a' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --navy:#0b1f3a; --navy-2:#132d52; --navy-3:#1c3d6b;
+    --gold:#c9a54a; --gold-2:#e2c47a;
+    --ink:#1b2433; --muted:#5b6678; --line:#e3e7ee; --bg:#ffffff; --bg-alt:#f6f7fa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px}
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.2;color:var(--navy)}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+  .eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:4px;font-weight:600;font-size:.95rem;transition:.2s}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-gold:hover{background:var(--gold-2)}
+  .btn-ghost{border:1px solid rgba(255,255,255,.4);color:#fff}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+  /* Header */
+  header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.25s;background:transparent}
+  header.scrolled{background:var(--navy);box-shadow:0 2px 20px rgba(0,0,0,.25)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .logo{display:flex;align-items:center;gap:12px;color:#fff}
+  .logo-mark{width:42px;height:42px;border:2px solid var(--gold);display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:1.4rem;color:var(--gold);font-weight:700}
+  .logo-text b{display:block;font-family:"Playfair Display",serif;font-size:1.2rem;letter-spacing:.06em}
+  .logo-text span{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-2)}
+  .links{display:flex;gap:32px;align-items:center}
+  .links a{color:#dfe5ef;font-size:.92rem;font-weight:500}
+  .links a:hover{color:var(--gold)}
+  .menu-btn{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+
+  /* Hero */
+  .hero{min-height:100vh;display:flex;align-items:center;color:#fff;position:relative;overflow:hidden;
+    background:linear-gradient(115deg,rgba(11,31,58,.97) 0%,rgba(11,31,58,.88) 55%,rgba(19,45,82,.75) 100%),
+    repeating-linear-gradient(90deg,transparent 0 79px,rgba(201,165,74,.06) 79px 80px),var(--navy)}
+  .hero::after{content:"";position:absolute;right:-180px;top:50%;transform:translateY(-50%);width:640px;height:640px;border:1px solid rgba(201,165,74,.25);border-radius:50%;box-shadow:0 0 0 80px rgba(201,165,74,.04),0 0 0 160px rgba(201,165,74,.03)}
+  .hero .wrap{position:relative;z-index:1;padding-top:76px}
+  .hero h1{color:#fff;font-size:clamp(2.3rem,5.5vw,4rem);max-width:760px;margin-bottom:22px}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p{font-size:1.12rem;color:#c8d2e1;max-width:600px;margin-bottom:36px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-strip{display:flex;gap:40px;flex-wrap:wrap;margin-top:70px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12)}
+  .hero-strip div{font-size:.88rem;color:#aebbd0}
+  .hero-strip b{display:block;color:var(--gold);font-family:"Playfair Display",serif;font-size:1.25rem;margin-bottom:2px}
+
+  section{padding:100px 0}
+  .alt{background:var(--bg-alt)}
+  .section-head{max-width:640px;margin-bottom:56px}
+  .section-head h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin-bottom:14px}
+  .section-head p{color:var(--muted)}
+  .center{text-align:center;margin-left:auto;margin-right:auto}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+  .about-grid p{color:var(--muted);margin-bottom:16px}
+  .about-card{background:var(--navy);color:#fff;padding:44px;position:relative}
+  .about-card::before{content:"";position:absolute;top:-14px;left:-14px;width:80px;height:80px;border-top:3px solid var(--gold);border-left:3px solid var(--gold)}
+  .about-card h3{color:var(--gold);font-size:1.3rem;margin-bottom:10px}
+  .about-card p{color:#c8d2e1;margin-bottom:26px}
+  .about-card p:last-child{margin-bottom:0}
+
+  /* Services */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:#fff;border:1px solid var(--line);padding:36px 30px;transition:.25s;position:relative}
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(11,31,58,.1);border-color:transparent}
+  .card::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--gold);transition:.3s}
+  .card:hover::after{width:100%}
+  .icon{width:54px;height:54px;background:var(--navy);display:grid;place-items:center;margin-bottom:22px}
+  .icon svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:1.25rem;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:.95rem}
+
+  /* Why */
+  .why{background:var(--navy);color:#fff}
+  .why h2{color:#fff}
+  .why .section-head p{color:#aebbd0}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+  .why-item{border-top:2px solid var(--gold);padding-top:22px}
+  .why-item .num{font-family:"Playfair Display",serif;color:var(--gold);font-size:1.6rem;margin-bottom:8px}
+  .why-item h3{color:#fff;font-size:1.12rem;margin-bottom:8px}
+  .why-item p{color:#aebbd0;font-size:.93rem}
+
+  /* Process */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+  .step{padding:0 24px 0 0;position:relative}
+  .step .dot{width:48px;height:48px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;font-weight:600;color:var(--navy);background:#fff;position:relative;z-index:1;margin-bottom:20px}
+  .step:not(:last-child)::before{content:"";position:absolute;top:24px;left:48px;right:0;height:1px;background:var(--line)}
+  .step h3{font-size:1.1rem;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:.93rem}
+
+  /* Sectors */
+  .sectors{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .sectors span{padding:12px 22px;border:1px solid var(--line);background:#fff;font-weight:500;font-size:.93rem;color:var(--navy)}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:56px}
+  .info-row{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .info-row .icon{width:44px;height:44px;margin:0;flex-shrink:0}
+  .info-row .icon svg{width:20px;height:20px}
+  .info-row small{display:block;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+  .info-row b{font-weight:600;color:var(--navy)}
+  form{background:var(--bg-alt);padding:40px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  label{display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:6px}
+  input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d6dce6;background:#fff;font:inherit;font-size:.95rem;margin-bottom:18px;border-radius:2px}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+  textarea{min-height:130px;resize:vertical}
+  form .btn{border:0;cursor:pointer;width:100%}
+
+  footer{background:#071629;color:#8d9bb2;padding:56px 0 28px;font-size:.9rem}
+  .foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .foot p{max-width:340px;margin-top:16px}
+  .foot h4{color:#fff;font-family:Inter,sans-serif;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+  .foot ul{list-style:none}
+  .foot li{margin-bottom:8px}
+  .foot a:hover{color:var(--gold)}
+  .copy{padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:960px){
+    .grid-3{grid-template-columns:repeat(2,1fr)}
+    .why-grid,.steps{grid-template-columns:repeat(2,1fr);row-gap:40px}
+    .step::before{display:none}
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  }
+  @media (max-width:720px){
+    section{padding:72px 0}
+    .wrap{padding:0 16px}
+    .menu-btn{display:block}
+    .links{position:fixed;top:76px;left:0;right:0;background:var(--navy);flex-direction:column;gap:0;padding:8px 0;display:none}
+    .links.open{display:flex}
+    .links a{padding:14px 20px;width:100%}
+    .links .btn{margin:8px 20px 12px;width:calc(100% - 40px);text-align:center}
+    .grid-3,.why-grid,.steps,.row{grid-template-columns:1fr}
+    .hero-strip{gap:24px}
+    form{padding:26px 20px}
+    .about-card{padding:32px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#" class="logo">
+      <div class="logo-mark">L</div>
+      <div class="logo-text"><b>LEMBROSE</b><span>Holding Company</span></div>
+    </a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('open')">&#9776;</button>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">How We Work</a>
+      <a href="#contact" class="btn btn-gold">Request a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Trading &amp; Logistics</span>
+    <h1>Moving goods. <em>Delivering value.</em> Building lasting partnerships.</h1>
+    <p>Lembrose Holding Company sources, supplies and moves the products your business depends on — reliably, on time and at the right price.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-gold">Request a Quote</a>
+      <a href="#services" class="btn btn-ghost">Our Services</a>
+    </div>
+    <div class="hero-strip">
+      <div><b>Sourcing</b>Trusted supplier network</div>
+      <div><b>Supply</b>Bulk &amp; project orders</div>
+      <div><b>Transport</b>Door-to-door delivery</div>
+      <div><b>Support</b>One point of contact</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow">Who We Are</span>
+      <h2 style="font-size:clamp(1.9rem,3.5vw,2.6rem);margin-bottom:20px">A South African holding company built on reliability</h2>
+      <p>Lembrose Holding Company is a proudly South African business focused on general trading, procurement and logistics. We connect businesses, government entities and project teams with the goods they need, and we make sure those goods arrive where they're needed, when they're needed.</p>
+      <p>Our model is simple: understand the requirement, source it from vetted suppliers, manage the logistics end to end, and keep the client informed at every step.</p>
+    </div>
+    <div class="about-card reveal">
+      <h3>Our Mission</h3>
+      <p>To deliver dependable trading and logistics solutions that help our clients operate without interruption.</p>
+      <h3>Our Vision</h3>
+      <p>To be a trusted name in African trade and supply-chain services, known for integrity and consistency.</p>
+      <h3>Our Values</h3>
+      <p>Integrity · Accountability · Efficiency · Partnership</p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Trading &amp; logistics services</h2>
+      <p>From a single urgent order to ongoing supply contracts, we handle the full journey from supplier to your site.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21V12h6v9"/></svg></div>
+        <h3>General Trading</h3>
+        <p>Supply of a broad range of goods, from industrial consumables and building materials to office and cleaning supplies.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M8 11h6M11 8v6"/></svg></div>
+        <h3>Procurement &amp; Sourcing</h3>
+        <p>We find, vet and negotiate with suppliers on your behalf to secure quality products at competitive prices.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M1 6h13v10H1z"/><path d="M14 9h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg></div>
+        <h3>Transport &amp; Freight</h3>
+        <p>Road freight and door-to-door delivery for local and long-distance routes, with reliable turnaround times.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></div>
+        <h3>Warehousing &amp; Distribution</h3>
+        <p>Storage, consolidation and scheduled distribution so stock reaches each of your sites when it's needed.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+        <h3>Import &amp; Export</h3>
+        <p>Coordinating cross-border shipments, documentation and clearing so international trade runs smoothly.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div>
+        <h3>Supply Contracts</h3>
+        <p>Long-term and tender-based supply agreements with scheduled deliveries and dedicated account management.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Lembrose</span>
+      <h2>A partner you can count on</h2>
+      <p>We know that a late delivery can stop a site or a production line. That's why we focus on doing the basics exceptionally well.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal"><div class="num">01</div><h3>Reliable Delivery</h3><p>Clear timelines and proactive updates, with no surprises on delivery day.</p></div>
+      <div class="why-item reveal"><div class="num">02</div><h3>Competitive Pricing</h3><p>Strong supplier relationships let us pass real savings on to you.</p></div>
+      <div class="why-item reveal"><div class="num">03</div><h3>Single Point of Contact</h3><p>One accountable partner from quote to proof of delivery.</p></div>
+      <div class="why-item reveal"><div class="num">04</div><h3>Compliance &amp; Integrity</h3><p>Transparent quoting, proper documentation and ethical business practice.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How We Work</span>
+      <h2>From request to delivery</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="dot">1</div><h3>Request</h3><p>Send us your requirements, quantities and delivery location.</p></div>
+      <div class="step reveal"><div class="dot">2</div><h3>Quote</h3><p>We source options and send a clear, itemised quotation.</p></div>
+      <div class="step reveal"><div class="dot">3</div><h3>Source &amp; Ship</h3><p>We procure, quality-check and dispatch your order.</p></div>
+      <div class="step reveal"><div class="dot">4</div><h3>Deliver</h3><p>Goods arrive on site with full documentation and proof of delivery.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head center reveal" style="text-align:center">
+      <span class="eyebrow">Who We Serve</span>
+      <h2>Industries we supply</h2>
+    </div>
+    <div class="sectors reveal">
+      <span>Mining</span><span>Construction</span><span>Manufacturing</span><span>Retail &amp; Wholesale</span>
+      <span>Government &amp; Municipalities</span><span>Agriculture</span><span>Healthcare</span><span>Corporate Offices</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2 style="font-size:clamp(1.9rem,3.5vw,2.6rem);margin-bottom:16px">Let's talk about your next order</h2>
+      <p style="color:var(--muted);margin-bottom:20px">Tell us what you need and we'll get back to you with a quotation.</p>
+      <div class="info-row">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
+        <div><small>Phone</small><b id="c-phone">[PHONE NUMBER]</b></div>
+      </div>
+      <div class="info-row">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
+        <div><small>Email</small><b id="c-email">[EMAIL ADDRESS]</b></div>
+      </div>
+      <div class="info-row">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><small>Address</small><b id="c-address">[PHYSICAL ADDRESS]</b></div>
+      </div>
+      <div class="info-row">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <div><small>Business Hours</small><b>Mon – Fri, 08:00 – 17:00</b></div>
+      </div>
+    </div>
+    <form class="reveal" onsubmit="return sendQuote(event)">
+      <div class="row">
+        <div><label for="name">Full name</label><input id="name" required></div>
+        <div><label for="company">Company</label><input id="company"></div>
+      </div>
+      <div class="row">
+        <div><label for="email">Email</label><input id="email" type="email" required></div>
+        <div><label for="phone">Phone</label><input id="phone" type="tel"></div>
+      </div>
+      <label for="service">Service required</label>
+      <select id="service">
+        <option>General Trading</option><option>Procurement &amp; Sourcing</option><option>Transport &amp; Freight</option>
+        <option>Warehousing &amp; Distribution</option><option>Import &amp; Export</option><option>Supply Contracts</option><option>Other</option>
+      </select>
+      <label for="msg">Details of your request</label>
+      <textarea id="msg" required placeholder="Products, quantities, delivery location and timeline"></textarea>
+      <button class="btn btn-gold" type="submit">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#" class="logo"><div class="logo-mark">L</div><div class="logo-text"><b>LEMBROSE</b><span>Holding Company</span></div></a>
+        <p>Trading, procurement and logistics solutions for businesses across South Africa.</p>
+      </div>
+      <div><h4>Company</h4><ul><li><a href="#about">About Us</a></li><li><a href="#why">Why Lembrose</a></li><li><a href="#process">How We Work</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="#services">General Trading</a></li><li><a href="#services">Procurement</a></li><li><a href="#services">Transport &amp; Freight</a></li><li><a href="#services">Import &amp; Export</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li id="f-phone">[PHONE NUMBER]</li><li id="f-email">[EMAIL ADDRESS]</li><li><a href="#contact">Request a Quote</a></li></ul></div>
+    </div>
+    <div class="copy"><span>© <span id="yr"></span> Lembrose Holding Company. All rights reserved.</span><span>Reg. No. [COMPANY REG. NUMBER]</span></div>
+  </div>
+</footer>
+
+<script>
+  // Quote form opens the visitor's email app addressed to the company
+  const COMPANY_EMAIL = '[EMAIL ADDRESS]';
+  function sendQuote(e){
+    e.preventDefault();
+    const v = id => document.getElementById(id).value.trim();
+    const subject = `Quote request – ${v('service')} – ${v('company') || v('name')}`;
+    const body = `Name: ${v('name')}\nCompany: ${v('company')}\nEmail: ${v('email')}\nPhone: ${v('phone')}\nService: ${v('service')}\n\n${v('msg')}`;
+    location.href = `mailto:${COMPANY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    return false;
+  }
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const hdr = document.querySelector('header');
+  addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 40));
+  document.querySelectorAll('.links a').forEach(a => a.addEventListener('click', () => document.querySelector('.links').classList.remove('open')));
+  const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
