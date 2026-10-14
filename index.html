@@ -195,6 +195,7 @@
       <span class="eyebrow">Who We Are</span>
       <h2 style="font-size:clamp(1.9rem,3.5vw,2.6rem);margin-bottom:20px">A South African holding company built on reliability</h2>
       <p>Lembrose Holding Company is a proudly South African business focused on general trading, procurement and logistics. We connect businesses, government entities and project teams with the goods they need, and we make sure those goods arrive where they're needed, when they're needed.</p>
+      <p>The company is owned and led by <strong style="color:var(--navy)">Bhekisisa Dlamini</strong> (Owner &amp; Director).</p>
       <p>Our model is simple: understand the requirement, source it from vetted suppliers, manage the logistics end to end, and keep the client informed at every step.</p>
     </div>
     <div class="about-card reveal">
@@ -302,15 +303,11 @@
       <p style="color:var(--muted);margin-bottom:20px">Tell us what you need and we'll get back to you with a quotation.</p>
       <div class="info-row">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
-        <div><small>Phone</small><b id="c-phone">[PHONE NUMBER]</b></div>
+        <div><small>Phone · Bhekisisa Dlamini</small><b id="c-phone"><a href="tel:+27814096922">081 409 6922</a></b></div>
       </div>
       <div class="info-row">
         <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
-        <div><small>Email</small><b id="c-email">[EMAIL ADDRESS]</b></div>
-      </div>
-      <div class="info-row">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div><small>Address</small><b id="c-address">[PHYSICAL ADDRESS]</b></div>
+        <div><small>Email</small><b id="c-email"><a href="mailto:bheki@lembroseholdings.co.za">bheki@lembroseholdings.co.za</a></b></div>
       </div>
       <div class="info-row">
         <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
@@ -347,15 +344,15 @@
       </div>
       <div><h4>Company</h4><ul><li><a href="#about">About Us</a></li><li><a href="#why">Why Lembrose</a></li><li><a href="#process">How We Work</a></li></ul></div>
       <div><h4>Services</h4><ul><li><a href="#services">General Trading</a></li><li><a href="#services">Procurement</a></li><li><a href="#services">Transport &amp; Freight</a></li><li><a href="#services">Import &amp; Export</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li id="f-phone">[PHONE NUMBER]</li><li id="f-email">[EMAIL ADDRESS]</li><li><a href="#contact">Request a Quote</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li id="f-phone"><a href="tel:+27814096922">081 409 6922</a></li><li id="f-email"><a href="mailto:bheki@lembroseholdings.co.za">bheki@lembroseholdings.co.za</a></li><li><a href="#contact">Request a Quote</a></li></ul></div>
     </div>
-    <div class="copy"><span>© <span id="yr"></span> Lembrose Holding Company. All rights reserved.</span><span>Reg. No. [COMPANY REG. NUMBER]</span></div>
+    <div class="copy"><span>© <span id="yr"></span> Lembrose Holding Company. All rights reserved.</span><span>Owner: Bhekisisa Dlamini</span></div>
   </div>
 </footer>
 
 <script>
   // Quote form opens the visitor's email app addressed to the company
-  const COMPANY_EMAIL = '[EMAIL ADDRESS]';
+  const COMPANY_EMAIL = 'bheki@lembroseholdings.co.za';
   function sendQuote(e){
     e.preventDefault();
     const v = id => document.getElementById(id).value.trim();
